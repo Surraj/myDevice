@@ -1,5 +1,7 @@
 {
   "name": "mydevice",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

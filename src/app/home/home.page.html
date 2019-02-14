@@ -1,12 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>
+			My location
+		</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+	<p>{{latitude}} - {{longitude}}</p>
+
+	<img [src]="imageData" *ngIf='imageData'>
+
+	<ion-button color="success" (click)="getLocation()">Get my Location</ion-button>
+	<ion-button color="danger" (click)="cameraPressed()">Take Picture</ion-button>
 </ion-content>
